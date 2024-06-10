@@ -27,16 +27,24 @@ exports.deactivate = exports.activate = void 0;
 const vscode = __importStar(require("vscode"));
 function activate(context) {
     console.log('GGWP, your extension "turbolog" is now active!');
-    const disposable = vscode.commands.registerCommand('turbolog.helloWorld', () => {
-        vscode.window.showInformationMessage('Hello World from TurboLog! gg');
+    const disposable = vscode.commands.registerCommand('turbolog.turboLog', () => {
+        vscode.window.showInformationMessage('You executed your extensions TurboLog! gg');
         // Get selected text
+        let highlighted = 'Nothing is selected';
         const editor = vscode.window.activeTextEditor;
         const selection = editor?.selection;
-        if (selection && !selection.isEmpty) {
-            const selectionRange = new vscode.Range(selection.start.line, selection.start.character, selection.end.line, selection.end.character);
-            const highlighted = editor?.document.getText(selectionRange);
-            console.log('highlighted', highlighted);
+        console.log('selection', selection);
+        const document = editor?.document;
+        if (editor) {
+            highlighted = document?.getText(selection);
+            console.log('highlighted :', highlighted);
         }
+        // Write texte to the next line
+        console.log('charac start', selection?.anchor.character);
+        console.log('charac end', selection?.end.character);
+        console.log('line start', selection?.anchor.line);
+        console.log('line end', selection?.end.line);
+        // console.log('line were we write', selection?.end?.line + 1);
     });
     context.subscriptions.push(disposable);
 }
