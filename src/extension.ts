@@ -4,7 +4,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 	console.log('GGWP, your extension "turbolog" is now active!');
 
-	const disposable = vscode.commands.registerCommand('turbolog.helloWorld', () => {
+	const disposable = vscode.commands.registerCommand('turbolog.turboLog', () => {
 		vscode.window.showInformationMessage('Hello World from TurboLog! gg');
 
 		// Get selected text

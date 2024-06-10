@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "turbolog.helloWorld",
-        "title": "Hello World"
+        "command": "turbolog.turboLog",
+        "title": "Turbo Log"
       }
     ]
   },
