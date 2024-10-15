@@ -2,7 +2,7 @@
   "name": "turbolog",
   "displayName": "TurboLog",
   "description": "",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "publisher": "NicolasMiladinovic",
   "engines": {
     "vscode": "^1.90.0"
