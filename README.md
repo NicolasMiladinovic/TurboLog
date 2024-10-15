@@ -1,6 +1,6 @@
-# turbolog
+# TurboLog
 
-`turboLog` is a Visual Studio Code extension that allows developers to quickly insert `console.log` statements into their code with a fun twist: each log statement is accompanied by a randomly generated emoji! With a simple keyboard shortcut, you can enhance your debugging process and make your logs more visually appealing.
+`TurboLog` is a Visual Studio Code extension that allows developers to quickly insert `console.log` statements into their code with a fun twist: each log statement is accompanied by a randomly generated emoji! With a simple keyboard shortcut, you can enhance your debugging process and make your logs more visually appealing.
 
 ## Features
 
@@ -12,13 +12,13 @@
 
 1. Open Visual Studio Code.
 2. Go to the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of the window or pressing `Ctrl + Shift + X`.
-3. Search for "turboLog" in the Extensions Marketplace.
+3. Search for "TurboLog" in the Extensions Marketplace.
 4. Click on the `Install` button.
 
 Alternatively, you can install the extension from the command line:
 
 ```bash
-code --install-extension your-publisher.turbolog
+code --install-extension your-publisher.Turbolog
 ```
 
 ## Usage

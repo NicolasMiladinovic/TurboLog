@@ -2,7 +2,7 @@
   "name": "turbolog",
   "displayName": "TurboLog",
   "description": "",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "NicolasMiladinovic",
   "engines": {
     "vscode": "^1.90.0"
@@ -10,7 +10,11 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onCommand:workbench.action.showCommands"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
