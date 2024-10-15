@@ -1,26 +1,36 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
+// @ts-ignore
+import emojiGenerator from 'generate-random-emoji';
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
+    const disposable = vscode.commands.registerCommand('turbolog.addLog', () => {
+        // Get the active text editor
+        const editor: vscode.TextEditor | undefined = vscode.window.activeTextEditor;
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "turbolog" is now active!');
+        if (editor) {
+            const selection: vscode.Selection = editor.selection;
+            const document: vscode.TextDocument = editor.document;
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	const disposable = vscode.commands.registerCommand('turbolog.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from TurboLog!');
-	});
+            // Get the selected text or the current word if no selection is made
+            const selectedText: string = document.getText(selection) || '';
 
-	context.subscriptions.push(disposable);
+            // Get the current line where the selection ends
+            const currentLine: number = selection.end.line;
+
+            // Generate one random emoji
+            const randomEmoji: any = emojiGenerator.generateEmojis(1)[0].image;
+
+			// Create the console.log statement with the emoji
+            const logToInsert: string = `console.log('${randomEmoji} ${selectedText}:', ${selectedText});`;
+
+            // Insert the console.log statement on the line below the selected text
+            editor.edit(editBuilder => {
+                editBuilder.insert(new vscode.Position(currentLine + 1, 0), `\n${logToInsert}`);
+            });
+        }
+    });
+
+    context.subscriptions.push(disposable);
 }
 
-// This method is called when your extension is deactivated
 export function deactivate() {}
