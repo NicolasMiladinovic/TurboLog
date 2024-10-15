@@ -2,7 +2,7 @@
   "name": "turbolog",
   "displayName": "TurboLog",
   "description": "",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "NicolasMiladinovic",
   "engines": {
     "vscode": "^1.90.0"
@@ -39,6 +39,9 @@
     "lint": "eslint src --ext ts",
     "test": "vscode-test"
   },
+  "dependencies": {
+    "generate-random-emoji": "^1.0.2"
+  },
   "devDependencies": {
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
@@ -48,7 +51,6 @@
     "@vscode/test-cli": "^0.0.9",
     "@vscode/test-electron": "^2.4.0",
     "eslint": "^8.57.0",
-    "generate-random-emoji": "^1.0.2",
     "typescript": "^5.4.5"
   },
   "repository": {
