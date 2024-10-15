@@ -10,3 +10,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## 1.0.0 -> 1.0.4
     Fix Short cut throw an error
+
+## 1.0.5
+    Clean repo
