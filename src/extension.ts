@@ -20,7 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
             // Generate one random emoji
             const randomEmoji: any = emojiGenerator.generateEmojis(1)[0].image;
 
-			// Create the console.log statement with the emoji
+            // Create the console.log statement with the emoji
             const logToInsert: string = `console.log('${randomEmoji} ${selectedText}:', ${selectedText});`;
 
             // Insert the console.log statement on the line below the selected text
@@ -33,4 +33,4 @@ export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(disposable);
 }
 
-export function deactivate() {}
+export function deactivate() { }
