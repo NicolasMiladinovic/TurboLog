@@ -8,6 +8,5 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Initial release
 
-## 1.0.0 -> 1.0.1
-    Short cut throw an error
-
+## 1.0.0 -> 1.0.3
+    Fix Short cut throw an error
