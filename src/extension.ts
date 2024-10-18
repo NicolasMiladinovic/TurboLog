@@ -23,9 +23,9 @@ export function activate(context: vscode.ExtensionContext) {
             // Create the console.log statement with the emoji
             const logToInsert: string = `console.log('${randomEmoji} ${selectedText}:', ${selectedText});`;
 
-            // Insert the console.log statement on the line below the selected text
+            // Insert the console.log on the next line
             editor.edit(editBuilder => {
-                editBuilder.insert(new vscode.Position(currentLine + 1, 0), `\n${logToInsert}`);
+                editBuilder.insert(new vscode.Position(currentLine + 1, 0), `${logToInsert}\n`);
             });
         }
     });

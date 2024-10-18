@@ -13,3 +13,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## 1.0.5
     Clean repo
+
+## 1.0.6
+    Fix console.log on a non empty line
